@@ -1,0 +1,8 @@
+<h1>
+  {{title}}
+</h1>
+
+ <input type="text" [(ngModel)]="title" (keyup.enter)="addTitle()"/>
+<button (click)="addTitle()">add title</button>
+<div *ngIf="isLoading">Loading ....</div>
+<title-list [myTitles]="titles" (startLoading)="OnLoading($event)"></title-list>
