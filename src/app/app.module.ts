@@ -8,11 +8,17 @@ import { LoginComponent } from "./login/login.component";
 
 import { RouterModule, Routes } from '@angular/router';
 import { TitleModule } from "./title-module/title.module";
+import { AddTitleComponent } from "./title-module/components/add-title/add-title.component";
+import { EditTitleComponent } from "./title-module/components/edit-title/edit-title.component";
 
 const routes: Routes = [
-  { path: "titles", component: AppComponent },
+  { path: "titles", component: AddTitleComponent, children:[
+    
+    {path:'title/:title', component:EditTitleComponent}
+  ] },
   { path: "login", component: LoginComponent },
-  { path: "", redirectTo: "/app", pathMatch:'full' }
+  { path: "", redirectTo: "/titles", pathMatch:'full' }
+  
 ];
 
 @NgModule({

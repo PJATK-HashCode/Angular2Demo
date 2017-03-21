@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Observable } from "rxjs";
+import { TitleModel } from "../../models/title-model";
 
 @Component({
 	selector: 'title-list',
@@ -40,12 +41,3 @@ export class TitleListComponent implements OnInit {
 	}
 }
 
-export class TitleModel{
-
-	/**
-	 *
-	 */
-	constructor(public title:string,public isVisible:boolean) {
-		
-	}
-}

@@ -4,6 +4,9 @@
     <p>{{valueFromEvent}}</p>
     <div *ngFor="let myTitle of myTitles" >
         <title-child [myTitle]="myTitle.title" *ngIf="myTitle.isVisible"></title-child>
+    
+    <button routerLink="title/{{myTitle.title}}">edit</button>
     </div>
 
+<router-outlet></router-outlet>
 </div>
